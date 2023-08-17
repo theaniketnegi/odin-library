@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Library</h1>
+    </header>
+    <dialog id="add-book">
+        <form>
+            <div class="modal-heading">
+                <h1>New book</h1>
+                <button formmethod="dialog" id="close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>close</title>
+                        <path
+                            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="input-container">
+                <input type="text" name="title" id="title" placeholder="Title..." required>
+                <input type="text" name="author" id="author" placeholder="Author..." required>
+                <input type="text" name="pages" id="pages" placeholder="Pages..." required>
+                <div class="read-container">
+                    <input type="checkbox" name="read" id="read"><label for="read">Read?</label>
+                </div>
+            </div>
+            <div>
+                <button id="confirm-btn" value="default">Add</button>
+            </div>
+        </form>
+    </dialog>
+    <div class="btn-container">
+        <div id="add-book-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>plus</title>
+                <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+            </svg>New Book</div>
+    </div>
+
+    <main>
+
+    </main>
+</body>
+
+</html>

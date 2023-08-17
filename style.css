@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Roboto, sans-serif;
+}
+body{
+    background-color: #77a05f;
+}
+header{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1em 0;
+    color: #314127;
+}
+#add-book {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em 2em;
+    border: 3px solid #314127;
+    border-radius: 15px;
+}
+
+.modal-heading{
+    margin-top: 1.5em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+.modal-heading button{
+    background-color: transparent;
+    border:none;
+    outline: none;
+}
+.modal-heading svg{
+    height: 30px;
+}
+.input-container{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 2em;
+    align-items: start;
+}
+.input-container input[type="text"]{
+    border-radius: 10px;
+    border: 3px solid #314127;
+    padding: 1em 2em;
+}
+.read-container{
+    display:flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.read-container input{
+    width: 20px;
+    height: 20px;
+}
+#confirm-btn{
+    padding: .5em 2em;
+    border: 3px solid #314127;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.btn-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container div{
+    background-color: white;
+    border: 3px solid #314127;
+    padding: 1em 2em;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #314127;
+    user-select: none;
+}
+
+.btn-container div svg{
+    height: 20px;
+    fill: #314127;
+}
+main{
+    margin: 4em; 
+    display:flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #605fa0;
+    padding: 1em 2em 3em;
+    border: 3px solid #314127;
+    color: black;
+    border-radius: 15px;
+    width: 20%;
+    max-width: 20%;
+    text-align: center;
+}
+.card-btn{
+    padding: .5em 3em;
+    border-radius: 15px;
+    border: 3px solid #314127;
+    user-select: none;
+}
+.read{
+    background-color: #01ac01;
+}
+.not-read{
+    background-color: #ff4f4f;
+}
+
+.remove{
+    background-color: white;
+}
+.read:hover{
+    background-color: #019701;
+}
+.read:active{
+    background-color: #028802;
+}
+.not-read:hover{
+    background-color: #dd4646;
+}
+.not-read:focus{
+    background-color: #bd3e3e;
+}
+.btn-container div:hover, .remove:hover, #confirm-btn:hover{
+    background-color: #e4e4e4;
+}
+.btn-container div:active, .remove:active, #confirm-btn:active{
+    background-color: #d6d6d6;
+}
