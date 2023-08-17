@@ -37,7 +37,6 @@ function changeReadStatus(e) {
 function deleteBook(e) {
   const divId = e.target.parentElement.dataset.id;
   books = books.filter((book) => book.id != divId);
-  console.log(books);
   updateBooks(books);
 }
 
@@ -55,7 +54,6 @@ function updateBooks(books) {
       <div class="card-btn remove" onclick="deleteBook(event)">Remove</div>
       </div>`;
   }).join('');
-  console.log(bookHolder.innerHTML);
   localStorageSave(books);
 }
 
@@ -63,7 +61,9 @@ function localStorageSave(books){
   localStorage.setItem("books",JSON.stringify(books));
 }
 function localStorageLoad(){
-  return JSON.parse(localStorage.getItem("books"));
+  if(localStorage.getItem("books"))
+    return JSON.parse(localStorage.getItem("books"));
+  return [];  
 }
 
 const bookHolder = document.querySelector("main");
